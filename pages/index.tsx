@@ -37,7 +37,7 @@ export default function Home() {
         />
         <meta
           property="og:image"
-          content="https://i.ibb.co/GQLCGs8/image.png"
+          content="https://i.ibb.co/r5DBxVz/image.png"
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
