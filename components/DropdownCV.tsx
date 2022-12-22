@@ -1,5 +1,6 @@
-import { useState, useEffect, useRef } from "react";
-import { SwitchTransition, CSSTransition } from "react-transition-group";
+import Link from "next/link";
+import { useEffect, useRef } from "react";
+import { CSSTransition } from "react-transition-group";
 
 interface Props {
   setIsOpen: (val: boolean) => void;
@@ -60,7 +61,7 @@ const DropdownCV = ({ setIsOpen, isOpen }: Props) => {
               <div className="flex items-center">
                 <a
                   className="flex"
-                  href="https://upcedupe-my.sharepoint.com/personal/u202021265_upc_edu_pe/Documents/CV/CV%20-%20DAVIS%20KEINER%20PEREZ%20GUZMAN.pdf"
+                  href="https://upcedupe-my.sharepoint.com/:b:/g/personal/u202021265_upc_edu_pe/ESeKAFgB4-1Oh9cMDrlkXywBeiobuDT8WC3S5fMM5HmBww?e=2aAQx3"
                   target="_blank"
                   rel="noreferrer"
                 >
@@ -76,7 +77,8 @@ const DropdownCV = ({ setIsOpen, isOpen }: Props) => {
               <div className="flex items-center">
                 <a
                   className="flex"
-                  href="https://upcedupe-my.sharepoint.com/personal/u202021265_upc_edu_pe/_layouts/15/download.aspx?SourceUrl=%2Fpersonal%2Fu202021265%5Fupc%5Fedu%5Fpe%2FDocuments%2FCV%2FCV%20%2D%20DAVIS%20KEINER%20PEREZ%20GUZMAN%2Epdf"
+                  download
+                  href="/file/CV_DAVIS_KEINER_PEREZ_GUZMAN.pdf"
                 >
                   <span className="text-[12px] text-[#F2F2F2] p-[5px_10px]">
                     Descargar
