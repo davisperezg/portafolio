@@ -100,7 +100,7 @@ a {
   pointer-events: none;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
   }
@@ -108,7 +108,7 @@ a {
     color: white;
     background: black;
   }
-}
+} */
 
 @media (max-width: 1170px) {
   figure {
