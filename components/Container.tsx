@@ -7,7 +7,7 @@ interface Props {
 
 const Container = ({ children, className }: Props) => {
   return (
-    <div className="p-[0_5vw] w-full">
+    <div className="p-[0_5vw] w-full flex flex-col flex-[1_1_100%]">
       <div
         className={`${
           className ? className + " " : ""

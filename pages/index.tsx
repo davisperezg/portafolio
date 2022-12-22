@@ -27,7 +27,7 @@ export default function Home() {
           que aprenderlo de los demás. Me enseñaron como base JAVA, SPRING, MAVEN y de forma
           autodidacta me llamó mucho la atención JAVASCRIPT. Encontré
           una libreria llamada REACTJS y me encantó 💖 por ello todos
-          mis proyectos estan desarollados en dicho lenguaje. Busco una
+          mis proyectos estan desarrollado en dicho lenguaje. Busco una
           empresa para explotar mis conocimientos ya que siento que
           estoy para más!🚀. Me especializo en la creación de aplicaciones Front End que se
           conectan con API y otras tecnologías de Back End. Me apasiona
@@ -111,7 +111,7 @@ export default function Home() {
               <h1 className="text-[15px] font-semibold uppercase">
                 Tecnologías que estoy aprendiendo... 🤓
               </h1>
-              <div className="grid grid-cols-[repeat(5,_1fr)] gap-[30px] mt-[50px]">
+              <div className="sm:grid-cols-[repeat(5,_1fr)] grid grid-cols-[repeat(3,_1fr)] gap-[30px] mt-[50px]">
                 <SkillsItem url="/assets/icons/nextjs.webp" title="Nextjs" />
               </div>
             </div>
@@ -119,7 +119,7 @@ export default function Home() {
               <h1 className="text-[15px] font-semibold uppercase">
                 Tecnologías que me gustaria aprender 💻
               </h1>
-              <div className="grid grid-cols-[repeat(5,_1fr)] gap-[30px] mt-[50px]">
+              <div className="sm:grid-cols-[repeat(5,_1fr)] grid grid-cols-[repeat(3,_1fr)] gap-[30px] mt-[50px]">
                 <SkillsItem url="/assets/icons/python.png" title="Python" />
               </div>
             </div>
@@ -688,7 +688,7 @@ export default function Home() {
                   Me enseñaron como base JAVA, SPRING, MAVEN y de forma
                   autodidacta me llamó mucho la atención JAVASCRIPT. Encontré
                   una libreria llamada REACTJS y me encantó 💖 por ello todos
-                  mis proyectos estan desarollados en dicho lenguaje. Busco una
+                  mis proyectos estan desarrollado en dicho lenguaje. Busco una
                   empresa para explotar mis conocimientos ya que siento que
                   estoy para más!🚀.
                 </p>
