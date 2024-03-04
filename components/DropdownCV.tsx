@@ -61,7 +61,7 @@ const DropdownCV = ({ setIsOpen, isOpen }: Props) => {
               <div className="flex items-center">
                 <a
                   className="flex"
-                  href="https://upcedupe-my.sharepoint.com/:b:/g/personal/u202021265_upc_edu_pe/ESeKAFgB4-1Oh9cMDrlkXywBeiobuDT8WC3S5fMM5HmBww?e=2aAQx3"
+                  href="https://upcedupe-my.sharepoint.com/:b:/g/personal/u202021265_upc_edu_pe/ERvvRZtIApZJpAJSNwWlqU0BsQOjgzFxxGv8Nm5XpxQypw?e=QIZybK"
                   target="_blank"
                   rel="noreferrer"
                 >
@@ -78,7 +78,7 @@ const DropdownCV = ({ setIsOpen, isOpen }: Props) => {
                 <a
                   className="flex"
                   download
-                  href="/file/CV_DAVIS_KEINER_PEREZ_GUZMAN.pdf"
+                  href="/file/CV-DAVIS_PEREZ_GUZMAN.pdf"
                 >
                   <span className="text-[12px] text-[#F2F2F2] p-[5px_10px]">
                     Descargar
