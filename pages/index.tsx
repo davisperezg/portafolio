@@ -123,7 +123,7 @@ export default function Home() {
               <div className="sm:grid-cols-[repeat(5,_1fr)] grid grid-cols-[repeat(3,_1fr)] gap-[30px] mt-[50px]">
                 <SkillsItem url="/assets/icons/python.png" title="Python" />
                 <SkillsItem url="/assets/icons/Laravel.svg" title="Laravel" />
-                <SkillsItem url="/assets/icons/Php.svg" title="Php" />
+                <SkillsItem url="/assets/icons/PHP.svg" title="Php" />
               </div>
             </div>
           </div>
