@@ -8,7 +8,7 @@ const Header = () => {
       <div className="border-b border-[#E9EAEB] border-solid h-[56px] flex justify-between">
         <div className="p-[18px_20px_17px_20px] h-full">
           <span className="font-extrabold text-[24px] leading-[16px] select-none text-[#273043]">
-            <Link href="/">Davis Pérez</Link>
+            <Link href="/">Davis Pérez Guzmán</Link>
           </span>
         </div>
         <div className="flex flex-row">

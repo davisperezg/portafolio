@@ -10,7 +10,7 @@ const Footer = () => {
             <Link href="/" className="hover:text-[#1759A6]">
               Davis Pérez Guzmán @davisperezg
             </Link>{" "}
-            @ 2022
+            @ 2025
           </section>
           <nav className="flex relative">
             <a
