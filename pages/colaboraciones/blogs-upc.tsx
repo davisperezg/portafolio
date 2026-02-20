@@ -1,3 +1,4 @@
+import Head from "next/head";
 import Image from "next/image";
 import Container from "../../components/Container";
 import HeaderArticulo from "../../components/Articulo/HeaderArticulo";
@@ -7,6 +8,24 @@ import ContentArticulo from "../../components/Articulo/ContentArticulo";
 const BlogsUpc = () => {
   return (
     <Container>
+      <Head>
+        <title>Colaboración Blog UPC | Davis Pérez</title>
+        <meta name="description" content="Colaboración en el Blog UPC: migración de artículos y script de imágenes por defecto con WordPress." />
+        <meta name="author" content="Davis Pérez" />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://davisperez.com/colaboraciones/blogs-upc/" />
+        <meta property="og:type" content="article" />
+        <meta property="og:locale" content="es_PE" />
+        <meta property="og:url" content="https://davisperez.com/colaboraciones/blogs-upc/" />
+        <meta property="og:site_name" content="Davis Pérez - Portafolio" />
+        <meta property="og:title" content="Colaboración Blog UPC | Davis Pérez" />
+        <meta property="og:description" content="Colaboración en el Blog UPC: migración de artículos y script de imágenes por defecto con WordPress." />
+        <meta property="og:image" content="https://i.ibb.co/r5DBxVz/image.png" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Colaboración Blog UPC | Davis Pérez" />
+        <meta name="twitter:description" content="Colaboración en el Blog UPC: migración de artículos y script de imágenes por defecto con WordPress." />
+        <meta name="twitter:image" content="https://i.ibb.co/r5DBxVz/image.png" />
+      </Head>
       <article>
         <HeaderArticulo>Colaboración para Blogs UPC</HeaderArticulo>
         <figure>

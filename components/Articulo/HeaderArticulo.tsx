@@ -1,5 +1,4 @@
 import { ReactNode } from "react";
-import { Separador } from "../Separador";
 
 interface Props {
   children: ReactNode;
@@ -7,13 +6,11 @@ interface Props {
 
 const HeaderArticulo = ({ children }: Props) => {
   return (
-    <header className="sm:p-[60px_5vw_50px_5vw] before:p-[20px_0_35px] m-[0_auto] relative">
-      <div className="p-[20px_0_0px]">
-        <h1 className="m-[0_0_.2em] text-[#0a0b0c] text-[4.2rem] font-[600] leading-[1.05em] mt-[0.2em]">
-          {children}
-        </h1>
-        <Separador />
-      </div>
+    <header className="py-8">
+      <h1 className="text-[22px] sm:text-[26px] font-bold text-[#273043] leading-snug">
+        {children}
+      </h1>
+      <div className="mt-4 border-b border-[#eaeff1]" />
     </header>
   );
 };

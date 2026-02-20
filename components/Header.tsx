@@ -8,7 +8,7 @@ const Header = () => {
       <div className="border-b border-[#E9EAEB] border-solid h-[56px] flex justify-between">
         <div className="p-[18px_20px_17px_20px] h-full">
           <span className="font-extrabold text-[24px] leading-[16px] select-none text-[#273043]">
-            <Link href="/">Davis Pérez Guzmán</Link>
+            <Link href="/">Davis Pérez</Link>
           </span>
         </div>
         <div className="flex flex-row">
@@ -41,7 +41,7 @@ const Header = () => {
           </MenuItem>
         </div>
       </div>
-      <div className="flex h-[56px] flex-nowrap overflow-visible border-b border-[#E9EAEB] border-solid overflow-x-scroll md:overflow-hidden">
+      <div className="flex h-[56px] flex-nowrap border-b border-[#E9EAEB] border-solid overflow-x-scroll md:overflow-hidden">
         <MenuItem typeLink url="/">
           INICIO
         </MenuItem>

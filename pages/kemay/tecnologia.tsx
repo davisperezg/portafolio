@@ -1,3 +1,4 @@
+import Head from "next/head";
 import Image from "next/image";
 import Container from "../../components/Container";
 import HeaderArticulo from "../../components/Articulo/HeaderArticulo";
@@ -7,6 +8,24 @@ import ContentArticulo from "../../components/Articulo/ContentArticulo";
 const Tecnologia = () => {
   return (
     <Container>
+      <Head>
+        <title>Página Web Kemay Technology | Davis Pérez</title>
+        <meta name="description" content="Desarrollo de página web informativa para Kemay Technology (cámaras de seguridad y cercos eléctricos) con React, Next.js y Node.js." />
+        <meta name="author" content="Davis Pérez" />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://davisperez.com/kemay/tecnologia/" />
+        <meta property="og:type" content="article" />
+        <meta property="og:locale" content="es_PE" />
+        <meta property="og:url" content="https://davisperez.com/kemay/tecnologia/" />
+        <meta property="og:site_name" content="Davis Pérez - Portafolio" />
+        <meta property="og:title" content="Página Web Kemay Technology | Davis Pérez" />
+        <meta property="og:description" content="Desarrollo de página web informativa para Kemay Technology (cámaras de seguridad y cercos eléctricos) con React, Next.js y Node.js." />
+        <meta property="og:image" content="https://i.ibb.co/r5DBxVz/image.png" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Página Web Kemay Technology | Davis Pérez" />
+        <meta name="twitter:description" content="Desarrollo de página web informativa para Kemay Technology con React, Next.js y Node.js." />
+        <meta name="twitter:image" content="https://i.ibb.co/r5DBxVz/image.png" />
+      </Head>
       <article>
         <HeaderArticulo>
           Desarrollo y diseño de pagína Kemay Technology

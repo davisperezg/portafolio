@@ -1,3 +1,4 @@
+import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import Container from "../../components/Container";
@@ -8,6 +9,24 @@ import ContentArticulo from "../../components/Articulo/ContentArticulo";
 const Portafolio = () => {
   return (
     <Container>
+      <Head>
+        <title>Mi Portafolio | Davis Pérez - Desarrollador Web</title>
+        <meta name="description" content="Diseño y desarrollo del portafolio personal de Davis Pérez con Next.js, React y TailwindCSS." />
+        <meta name="author" content="Davis Pérez" />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://davisperez.com/apps/portafolio/" />
+        <meta property="og:type" content="article" />
+        <meta property="og:locale" content="es_PE" />
+        <meta property="og:url" content="https://davisperez.com/apps/portafolio/" />
+        <meta property="og:site_name" content="Davis Pérez - Portafolio" />
+        <meta property="og:title" content="Mi Portafolio | Davis Pérez - Desarrollador Web" />
+        <meta property="og:description" content="Diseño y desarrollo del portafolio personal de Davis Pérez con Next.js, React y TailwindCSS." />
+        <meta property="og:image" content="https://i.ibb.co/r5DBxVz/image.png" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Mi Portafolio | Davis Pérez - Desarrollador Web" />
+        <meta name="twitter:description" content="Diseño y desarrollo del portafolio personal de Davis Pérez con Next.js, React y TailwindCSS." />
+        <meta name="twitter:image" content="https://i.ibb.co/r5DBxVz/image.png" />
+      </Head>
       <article>
         <HeaderArticulo>Diseño de pagina web - MI PORTAFOLIO</HeaderArticulo>
         <figure>

@@ -6,6 +6,8 @@ import Image from "next/image";
 import SkillsItem from "../components/SkillsItem";
 import ProyectoItem from "../components/ProyectoItem";
 import { Separador } from "../components/Separador";
+import { FaGithub } from "react-icons/fa";
+import { FaLinkedin } from "react-icons/fa";
 
 export default function Home() {
   const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -13,32 +15,82 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Davis Pérez Guzmán - Desarrollador Web</title>
-        <meta name="description" content="Mi portafolio - Davis Perez Guzman" />
-        <meta property="og:title" content="Davis Pérez Guzmán" />
+        <title>Davis Pérez - Desarrollador Web Full Stack JavaScript</title>
+        <meta
+          name="description"
+          content="Portafolio de Davis Pérez, desarrollador web Full Stack JavaScript especializado en React, Node.js, NestJS y TypeScript. +2 años de experiencia freelance."
+        />
+        <meta name="author" content="Davis Pérez" />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://davisperez.com/" />
+
+        {/* Open Graph */}
+        <meta property="og:type" content="website" />
+        <meta property="og:locale" content="es_PE" />
+        <meta property="og:url" content="https://davisperez.com/" />
+        <meta property="og:site_name" content="Davis Pérez - Portafolio" />
+        <meta
+          property="og:title"
+          content="Davis Pérez - Desarrollador Web Full Stack JavaScript"
+        />
         <meta
           property="og:description"
-          content="Actualmente estoy en busqueda de una oportunidad laboral,
-          estuve como desarrollador freelance trabajando de Full Stack
-          JavaScript momentaneamente doy mantenimiento e implementando
-          nuevos requerimientos de mis clientes. A pesar de que tengo +2
-          años como freelance aun me siento como un junior porque
-          entiendo que siempre nos encontramos en desarrollo y que mejor
-          que aprenderlo de los demás. Me enseñaron como base JAVA, SPRING, MAVEN y de forma
-          autodidacta me llamó mucho la atención JAVASCRIPT. Encontré
-          una libreria llamada REACTJS y me encantó 💖 por ello todos
-          mis proyectos estan desarrollado en dicho lenguaje. Busco una
-          empresa para explotar mis conocimientos ya que siento que
-          estoy para más!🚀. Me especializo en la creación de aplicaciones Front End que se
-          conectan con API y otras tecnologías de Back End. Me apasiona
-          aprender nuevas tecnologías y entiendo que hay más de una
-          manera de realizar una tarea. Aprendo rápido y puedo aprender nuevas pilas tecnológicas
-          según sea necesario.🔨"
+          content="Portafolio de Davis Pérez, desarrollador web Full Stack JavaScript especializado en React, Node.js, NestJS y TypeScript. +2 años de experiencia freelance."
         />
         <meta
           property="og:image"
           content="https://i.ibb.co/r5DBxVz/image.png"
         />
+        <meta
+          property="og:image:alt"
+          content="Davis Pérez - Desarrollador Web Full Stack"
+        />
+
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:title"
+          content="Davis Pérez - Desarrollador Web Full Stack JavaScript"
+        />
+        <meta
+          name="twitter:description"
+          content="Portafolio de Davis Pérez, desarrollador web Full Stack JavaScript especializado en React, Node.js, NestJS y TypeScript."
+        />
+        <meta
+          name="twitter:image"
+          content="https://i.ibb.co/r5DBxVz/image.png"
+        />
+
+        {/* JSON-LD Structured Data */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Person",
+              name: "Davis Pérez",
+              url: "https://davisperez.com",
+              jobTitle: "Desarrollador Web Full Stack",
+              email: "davisperezg@gmail.com",
+              knowsAbout: [
+                "React",
+                "JavaScript",
+                "TypeScript",
+                "Node.js",
+                "NestJS",
+                "MongoDB",
+                "GraphQL",
+                "Next.js",
+                "TailwindCSS",
+              ],
+              sameAs: [
+                "https://github.com/davisperezg",
+                "https://www.linkedin.com/in/davisperezg",
+              ],
+            }),
+          }}
+        />
+
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
@@ -61,12 +113,12 @@ export default function Home() {
 
       <Container>
         <div id="tecnologias" className="mb-[30px] mt-[30px] scroll-my-[27ex]">
-          <div className="bg-white flex flex-col">
-            <div className="mb-[50px]">
-              <h1 className="text-[15px] font-semibold uppercase">
-                Tecnologías con las que estuve trabajando 🚧
-              </h1>
-              <div className="sm:grid-cols-[repeat(5,_1fr)] grid grid-cols-[repeat(3,_1fr)] gap-[30px] mt-[50px]">
+          <div className="bg-white flex flex-col gap-10">
+            <div>
+              <h2 className="text-[11px] font-semibold uppercase tracking-widest text-[#273043]/50 border-l-[3px] border-[#273043] pl-3">
+                Tecnologías con las que estuve trabajando
+              </h2>
+              <div className="sm:grid-cols-[repeat(5,_1fr)] grid grid-cols-[repeat(4,_1fr)] gap-3 mt-6">
                 <SkillsItem url="/assets/icons/html.webp" title="HTML5" />
                 <SkillsItem url="/assets/icons/css.png" title="CSS3" />
                 <SkillsItem
@@ -106,21 +158,21 @@ export default function Home() {
                 <SkillsItem url="/assets/icons/mysql.png" title="MySQL" />
               </div>
             </div>
-            <div className="mb-[50px]">
-              <h1 className="text-[15px] font-semibold uppercase">
-                Tecnologías que estoy aprendiendo... 🤓
-              </h1>
-              <div className="sm:grid-cols-[repeat(5,_1fr)] grid grid-cols-[repeat(3,_1fr)] gap-[30px] mt-[50px]">
+            <div>
+              <h2 className="text-[11px] font-semibold uppercase tracking-widest text-[#273043]/50 border-l-[3px] border-[#273043] pl-3">
+                Aprendiendo actualmente
+              </h2>
+              <div className="sm:grid-cols-[repeat(5,_1fr)] grid grid-cols-[repeat(4,_1fr)] gap-3 mt-6">
                 <SkillsItem url="/assets/icons/nextjs.webp" title="Nextjs" />
                 <SkillsItem url="/assets/icons/angular.webp" title="Angular" />
                 <SkillsItem url="/assets/icons/netcore.svg" title="NetCore" />
               </div>
             </div>
-            <div className="">
-              <h1 className="text-[15px] font-semibold uppercase">
-                Tecnologías que me gustaria aprender 💻
-              </h1>
-              <div className="sm:grid-cols-[repeat(5,_1fr)] grid grid-cols-[repeat(3,_1fr)] gap-[30px] mt-[50px]">
+            <div>
+              <h2 className="text-[11px] font-semibold uppercase tracking-widest text-[#273043]/50 border-l-[3px] border-[#273043] pl-3">
+                Me gustaría aprender
+              </h2>
+              <div className="sm:grid-cols-[repeat(5,_1fr)] grid grid-cols-[repeat(4,_1fr)] gap-3 mt-6">
                 <SkillsItem url="/assets/icons/python.png" title="Python" />
                 <SkillsItem url="/assets/icons/Laravel.svg" title="Laravel" />
                 <SkillsItem url="/assets/icons/PHP.svg" title="Php" />
@@ -133,536 +185,116 @@ export default function Home() {
 
         <div id="proyectos" className="mb-[30px] mt-[30px] scroll-my-[27ex]">
           <div className="bg-white flex flex-col">
-            <h1 className="text-[15px] font-semibold uppercase">Proyectos</h1>
-            <div className="sm:grid-cols-[repeat(3,_1fr)] grid grid-cols-[repeat(1,_1fr)] gap-[30px] mt-[50px]">
+            <h2 className="text-[11px] font-semibold uppercase tracking-widest text-[#273043]/50 border-l-[3px] border-[#273043] pl-3">
+              Proyectos
+            </h2>
+            <div className="sm:grid-cols-3 grid grid-cols-1 gap-5 mt-6">
               <ProyectoItem
                 urlContent="/kemay/sistema"
                 urlGithub="https://github.com/davisperezg/frontend-kemaytechnology"
                 url="/assets/img/proyectos/appkemay.png"
                 titleImage="App Kemay"
                 titleBackground="Desarrollo de sistema web para Kemay GPS"
-              >
-                <div className="flex flex-row mt-[20px]">
-                  <Image
-                    width={25}
-                    height={25}
-                    src="/assets/icons/html.webp"
-                    alt="HTML5"
-                  />
-                  <Image
-                    width={25}
-                    height={25}
-                    src="/assets/icons/css.png"
-                    alt="CSS3"
-                  />
-                  <Image
-                    width={25}
-                    height={25}
-                    src="/assets/icons/javascript.webp"
-                    alt="Javascript"
-                  />
-                  <Image
-                    width={25}
-                    height={25}
-                    src="/assets/icons/typescript.png"
-                    alt="TypeScript"
-                  />
-                  <Image
-                    width={25}
-                    height={25}
-                    src="/assets/icons/react.webp"
-                    alt="Reactjs"
-                  />
-                  <Image
-                    width={25}
-                    height={25}
-                    src="/assets/icons/materialui.png"
-                    alt="Material UI"
-                  />
-                  <Image
-                    width={25}
-                    height={25}
-                    src="/assets/icons/node.webp"
-                    alt="Node"
-                  />
-                  <Image
-                    width={25}
-                    height={25}
-                    src="/assets/icons/nestjs.svg"
-                    alt="Nestjs"
-                  />
-                  <Image
-                    width={25}
-                    height={25}
-                    src="/assets/icons/expressjs.png"
-                    alt="Expressjs"
-                  />
-                  <Image
-                    width={25}
-                    height={25}
-                    src="/assets/icons/graphql.png"
-                    alt="Graphql"
-                  />
-                  <Image
-                    width={25}
-                    height={25}
-                    src="/assets/icons/mongodb.png"
-                    alt="Mongodb"
-                  />
-                </div>
-              </ProyectoItem>
-
-              <ProyectoItem
-                urlContent="/kemay/gps"
-                urlGithub="https://github.com/davisperezg/frontend-kemaytechnology"
-                url="/assets/img/proyectos/page_kemaygps.png"
-                titleImage="KemayGPS"
-                titleBackground="Diseño de página para Kemay GPS"
-              >
-                <div className="flex flex-row mt-[20px]">
-                  <Image
-                    width={25}
-                    height={25}
-                    src="/assets/icons/html.webp"
-                    alt="HTML5"
-                  />
-                  <Image
-                    width={25}
-                    height={25}
-                    src="/assets/icons/css.png"
-                    alt="CSS3"
-                  />
-                  <Image
-                    width={25}
-                    height={25}
-                    src="/assets/icons/javascript.webp"
-                    alt="Javascript"
-                  />
-                  <Image
-                    width={25}
-                    height={25}
-                    src="/assets/icons/wordpress.png"
-                    alt="Wordpress"
-                  />
-                </div>
-              </ProyectoItem>
+                techs={[
+                  { src: "/assets/icons/html.webp", alt: "HTML5" },
+                  { src: "/assets/icons/css.png", alt: "CSS3" },
+                  { src: "/assets/icons/javascript.webp", alt: "Javascript" },
+                  { src: "/assets/icons/typescript.png", alt: "TypeScript" },
+                  { src: "/assets/icons/react.webp", alt: "Reactjs" },
+                  { src: "/assets/icons/materialui.png", alt: "Material UI" },
+                  { src: "/assets/icons/node.webp", alt: "Nodejs" },
+                  { src: "/assets/icons/nestjs.svg", alt: "Nestjs" },
+                  { src: "/assets/icons/expressjs.png", alt: "Expressjs" },
+                  { src: "/assets/icons/graphql.png", alt: "Graphql" },
+                  { src: "/assets/icons/mongodb.png", alt: "Mongodb" },
+                ]}
+              />
 
               <ProyectoItem
                 urlContent="/kemay/tecnologia"
                 url="/assets/img/proyectos/page_kemaytech.png"
                 titleImage="KemayTech"
-                titleBackground="Diseño de página para Kemay Technology"
-              >
-                <div className="flex flex-row mt-[20px]">
-                  <Image
-                    width={25}
-                    height={25}
-                    src="/assets/icons/html.webp"
-                    alt="HTML5"
-                  />
-                  <Image
-                    width={25}
-                    height={25}
-                    src="/assets/icons/css.png"
-                    alt="CSS3"
-                  />
-                  <Image
-                    width={25}
-                    height={25}
-                    src="/assets/icons/javascript.webp"
-                    alt="Javascript"
-                  />
-                  <Image
-                    width={25}
-                    height={25}
-                    src="/assets/icons/typescript.png"
-                    alt="TypeScript"
-                  />
-                  <Image
-                    width={25}
-                    height={25}
-                    src="/assets/icons/react.webp"
-                    alt="Javascript"
-                  />
-                  <Image
-                    width={25}
-                    height={25}
-                    src="/assets/icons/nextjs.webp"
-                    alt="Nextjs"
-                  />
-                  <Image
-                    width={25}
-                    height={25}
-                    src="/assets/icons/node.webp"
-                    alt="Nodejs"
-                  />
-                </div>
-              </ProyectoItem>
-
-              <ProyectoItem
-                urlContent="/campeonmundial"
-                urlGithub="https://github.com/davisperezg/web-intranet-campeon-mundial"
-                url="/assets/img/proyectos/campeonmundial.png"
-                titleImage="Campeon Mundial"
-                titleBackground="Desarollo de sistema web para Campeon Mundial Escuela de Conductores"
-              >
-                <div className="flex flex-row mt-[20px]">
-                  <Image
-                    width={25}
-                    height={25}
-                    src="/assets/icons/html.webp"
-                    alt="HTML5"
-                  />
-                  <Image
-                    width={25}
-                    height={25}
-                    src="/assets/icons/css.png"
-                    alt="CSS3"
-                  />
-                  <Image
-                    width={25}
-                    height={25}
-                    src="/assets/icons/javascript.webp"
-                    alt="Javascript"
-                  />
-                  <Image
-                    width={25}
-                    height={25}
-                    src="/assets/icons/typescript.png"
-                    alt="TypeScript"
-                  />
-                  <Image
-                    width={25}
-                    height={25}
-                    src="/assets/icons/react.webp"
-                    alt="ReactJs"
-                  />
-                  <Image
-                    width={25}
-                    height={25}
-                    src="/assets/icons/bootstrap.png"
-                    alt="Bootstrap"
-                  />
-                  <Image
-                    width={25}
-                    height={25}
-                    src="/assets/icons/node.webp"
-                    alt="Nodejs"
-                  />
-                  <Image
-                    width={25}
-                    height={25}
-                    src="/assets/icons/expressjs.png"
-                    alt="Expressjs"
-                  />
-                  <Image
-                    width={25}
-                    height={25}
-                    src="/assets/icons/mongodb.png"
-                    alt="Mongodb"
-                  />
-                </div>
-              </ProyectoItem>
+                titleBackground="Diseño de página para Kemay Technology (Rediseñando)"
+                techs={[
+                  { src: "/assets/icons/html.webp", alt: "HTML5" },
+                  { src: "/assets/icons/css.png", alt: "CSS3" },
+                  { src: "/assets/icons/javascript.webp", alt: "Javascript" },
+                  { src: "/assets/icons/typescript.png", alt: "TypeScript" },
+                  { src: "/assets/icons/react.webp", alt: "Reactjs" },
+                  { src: "/assets/icons/nextjs.webp", alt: "Nextjs" },
+                  { src: "/assets/icons/node.webp", alt: "Nodejs" },
+                ]}
+              />
 
               <ProyectoItem
                 urlContent="/colaboraciones/blogs-upc"
                 url="/assets/img/proyectos/blog_upc.png"
                 titleImage="Blog UPC"
                 titleBackground="Colaboración para Blogs UPC"
-              >
-                <div className="flex flex-row mt-[20px]">
-                  <Image
-                    width={25}
-                    height={25}
-                    src="/assets/icons/html.webp"
-                    alt="HTML5"
-                  />
-                  <Image
-                    width={25}
-                    height={25}
-                    src="/assets/icons/css.png"
-                    alt="CSS3"
-                  />
-                  <Image
-                    width={25}
-                    height={25}
-                    src="/assets/icons/javascript.webp"
-                    alt="Javascript"
-                  />
-                  <Image
-                    width={25}
-                    height={25}
-                    src="/assets/icons/wordpress.png"
-                    alt="Wordpress"
-                  />
-                </div>
-              </ProyectoItem>
+                techs={[
+                  { src: "/assets/icons/html.webp", alt: "HTML5" },
+                  { src: "/assets/icons/css.png", alt: "CSS3" },
+                  { src: "/assets/icons/javascript.webp", alt: "Javascript" },
+                  { src: "/assets/icons/wordpress.png", alt: "Wordpress" },
+                ]}
+              />
 
               <ProyectoItem
                 urlContent="/apps/comercial-sarai"
                 urlGithub="https://github.com/davisperezg/frontend-facturacion-sisvilla"
                 url="/assets/img/proyectos/comercial_sarai.png"
                 titleImage="Comercial SARAI"
-                titleBackground="Desarollo de sistema web para Comercial SARAI"
-              >
-                <div className="flex flex-row mt-[20px]">
-                  <Image
-                    width={25}
-                    height={25}
-                    src="/assets/icons/html.webp"
-                    alt="HTML5"
-                  />
-                  <Image
-                    width={25}
-                    height={25}
-                    src="/assets/icons/css.png"
-                    alt="CSS3"
-                  />
-                  <Image
-                    width={25}
-                    height={25}
-                    src="/assets/icons/javascript.webp"
-                    alt="Javascript"
-                  />
-                  <Image
-                    width={25}
-                    height={25}
-                    src="/assets/icons/typescript.png"
-                    alt="TypeScript"
-                  />
-                  <Image
-                    width={25}
-                    height={25}
-                    src="/assets/icons/react.webp"
-                    alt="Reactjs"
-                  />
-                  <Image
-                    width={25}
-                    height={25}
-                    src="/assets/icons/bootstrap.png"
-                    alt="Bootstrap"
-                  />
-                  <Image
-                    width={25}
-                    height={25}
-                    src="/assets/icons/node.webp"
-                    alt="Nodejs"
-                  />
-                  <Image
-                    width={25}
-                    height={25}
-                    src="/assets/icons/nestjs.svg"
-                    alt="Nestjs"
-                  />
-                  <Image
-                    width={25}
-                    height={25}
-                    src="/assets/icons/expressjs.png"
-                    alt="Expressjs"
-                  />
-                  <Image
-                    width={25}
-                    height={25}
-                    src="/assets/icons/mongodb.png"
-                    alt="Mongodb"
-                  />
-                </div>
-              </ProyectoItem>
-
-              <ProyectoItem
-                urlContent="/apps/sintraunna"
-                urlGithub="https://github.com/davisperezg/frontend-sintraunna"
-                url="/assets/img/proyectos/sintraunna.png"
-                titleImage="Sintraunna"
-                titleBackground="Desarollo de sistema web para Asociación de sindicatos - SINTRAUNNA"
-              >
-                <div className="flex flex-row mt-[20px]">
-                  <Image
-                    width={25}
-                    height={25}
-                    src="/assets/icons/html.webp"
-                    alt="HTML5"
-                  />
-                  <Image
-                    width={25}
-                    height={25}
-                    src="/assets/icons/css.png"
-                    alt="CSS3"
-                  />
-                  <Image
-                    width={25}
-                    height={25}
-                    src="/assets/icons/javascript.webp"
-                    alt="Javascript"
-                  />
-                  <Image
-                    width={25}
-                    height={25}
-                    src="/assets/icons/typescript.png"
-                    alt="TypeScript"
-                  />
-                  <Image
-                    width={25}
-                    height={25}
-                    src="/assets/icons/react.webp"
-                    alt="Reactjs"
-                  />
-                  <Image
-                    width={25}
-                    height={25}
-                    src="/assets/icons/materialui.png"
-                    alt="Material UI"
-                  />
-                  <Image
-                    width={25}
-                    height={25}
-                    src="/assets/icons/node.webp"
-                    alt="Nodejs"
-                  />
-                  <Image
-                    width={25}
-                    height={25}
-                    src="/assets/icons/nestjs.svg"
-                    alt="Nestjs"
-                  />
-                  <Image
-                    width={25}
-                    height={25}
-                    src="/assets/icons/expressjs.png"
-                    alt="Expressjs"
-                  />
-                  <Image
-                    width={25}
-                    height={25}
-                    src="/assets/icons/mongodb.png"
-                    alt="Mongodb"
-                  />
-                </div>
-              </ProyectoItem>
+                titleBackground="Desarrollo de sistema web para Comercial SARAI"
+                techs={[
+                  { src: "/assets/icons/html.webp", alt: "HTML5" },
+                  { src: "/assets/icons/css.png", alt: "CSS3" },
+                  { src: "/assets/icons/javascript.webp", alt: "Javascript" },
+                  { src: "/assets/icons/typescript.png", alt: "TypeScript" },
+                  { src: "/assets/icons/react.webp", alt: "Reactjs" },
+                  { src: "/assets/icons/bootstrap.png", alt: "Bootstrap" },
+                  { src: "/assets/icons/node.webp", alt: "Nodejs" },
+                  { src: "/assets/icons/nestjs.svg", alt: "Nestjs" },
+                  { src: "/assets/icons/expressjs.png", alt: "Expressjs" },
+                  { src: "/assets/icons/mongodb.png", alt: "Mongodb" },
+                ]}
+              />
 
               <ProyectoItem
                 urlContent="/apps/rpumv2"
                 urlGithub="https://github.com/davisperezg/backend-adm-rpum"
                 url="/assets/img/proyectos/rpumv2/ss_rpumv2_modulosdis.png"
                 titleImage="RPUMv2"
-                titleBackground="Desarollo de sistema web RPUM"
-              >
-                <div className="flex flex-row mt-[20px]">
-                  <Image
-                    width={25}
-                    height={25}
-                    src="/assets/icons/html.webp"
-                    alt="HTML5"
-                  />
-                  <Image
-                    width={25}
-                    height={25}
-                    src="/assets/icons/css.png"
-                    alt="CSS3"
-                  />
-                  <Image
-                    width={25}
-                    height={25}
-                    src="/assets/icons/javascript.webp"
-                    alt="Javascript"
-                  />
-                  <Image
-                    width={25}
-                    height={25}
-                    src="/assets/icons/typescript.png"
-                    alt="TypeScript"
-                  />
-                  <Image
-                    width={25}
-                    height={25}
-                    src="/assets/icons/react.webp"
-                    alt="Reactjs"
-                  />
-                  <Image
-                    width={25}
-                    height={25}
-                    src="/assets/icons/materialui.png"
-                    alt="Material UI"
-                  />
-                  <Image
-                    width={25}
-                    height={25}
-                    src="/assets/icons/node.webp"
-                    alt="Nodejs"
-                  />
-                  <Image
-                    width={25}
-                    height={25}
-                    src="/assets/icons/nestjs.svg"
-                    alt="Nestjs"
-                  />
-                  <Image
-                    width={25}
-                    height={25}
-                    src="/assets/icons/expressjs.png"
-                    alt="Expressjs"
-                  />
-                  <Image
-                    width={25}
-                    height={25}
-                    src="/assets/icons/mongodb.png"
-                    alt="Mongodb"
-                  />
-                </div>
-              </ProyectoItem>
+                titleBackground="Desarrollo de sistema web RPUM"
+                techs={[
+                  { src: "/assets/icons/html.webp", alt: "HTML5" },
+                  { src: "/assets/icons/css.png", alt: "CSS3" },
+                  { src: "/assets/icons/javascript.webp", alt: "Javascript" },
+                  { src: "/assets/icons/typescript.png", alt: "TypeScript" },
+                  { src: "/assets/icons/react.webp", alt: "Reactjs" },
+                  { src: "/assets/icons/materialui.png", alt: "Material UI" },
+                  { src: "/assets/icons/node.webp", alt: "Nodejs" },
+                  { src: "/assets/icons/nestjs.svg", alt: "Nestjs" },
+                  { src: "/assets/icons/expressjs.png", alt: "Expressjs" },
+                  { src: "/assets/icons/mongodb.png", alt: "Mongodb" },
+                ]}
+              />
 
               <ProyectoItem
                 urlContent="/apps/portafolio"
                 urlGithub="https://github.com/davisperezg/portafolio"
                 url="/assets/img/proyectos/portal_portafolio.png"
                 titleImage="Mi portafolio"
-                titleBackground="DISEÑO DE PÁGINA PARA MI PORTAFOLIO"
-              >
-                <div className="flex flex-row mt-[20px]">
-                  <Image
-                    width={25}
-                    height={25}
-                    src="/assets/icons/html.webp"
-                    alt="HTML5"
-                  />
-                  <Image
-                    width={25}
-                    height={25}
-                    src="/assets/icons/css.png"
-                    alt="CSS3"
-                  />
-                  <Image
-                    width={25}
-                    height={25}
-                    src="/assets/icons/javascript.webp"
-                    alt="Javascript"
-                  />
-                  <Image
-                    width={25}
-                    height={25}
-                    src="/assets/icons/typescript.png"
-                    alt="TypeScript"
-                  />
-                  <Image
-                    width={25}
-                    height={25}
-                    src="/assets/icons/react.webp"
-                    alt="Reactjs"
-                  />
-                  <Image
-                    width={25}
-                    height={25}
-                    src="/assets/icons/nextjs.webp"
-                    alt="Nextjs"
-                  />
-                  <Image
-                    width={25}
-                    height={25}
-                    src="/assets/icons/tailwind.webp"
-                    alt="Tailwind"
-                  />
-                </div>
-              </ProyectoItem>
+                titleBackground="Diseño de página para mi portafolio"
+                techs={[
+                  { src: "/assets/icons/html.webp", alt: "HTML5" },
+                  { src: "/assets/icons/css.png", alt: "CSS3" },
+                  { src: "/assets/icons/javascript.webp", alt: "Javascript" },
+                  { src: "/assets/icons/typescript.png", alt: "TypeScript" },
+                  { src: "/assets/icons/react.webp", alt: "Reactjs" },
+                  { src: "/assets/icons/nextjs.webp", alt: "Nextjs" },
+                  { src: "/assets/icons/tailwind.webp", alt: "Tailwind" },
+                ]}
+              />
             </div>
           </div>
         </div>
@@ -671,44 +303,39 @@ export default function Home() {
 
         <div id="sobremi" className="mb-[30px] mt-[30px] scroll-my-[27ex]">
           <div className="bg-white flex flex-col">
-            <h1 className="text-[15px] font-semibold uppercase">Sobre mi</h1>
+            <h2 className="text-[11px] font-semibold uppercase tracking-widest text-[#273043]/50 border-l-[3px] border-[#273043] pl-3">
+              Sobre mí
+            </h2>
 
-            <div className="grid md:grid-cols-[3fr,_1fr] gap-[30px] mt-[50px]">
+            <div className="grid md:grid-cols-[2fr,_1fr] gap-8 mt-6">
               <div className="flex flex-col">
-                <h1 className="uppercase font-bold text-[28px]">
-                  DAVIS PÉREZ GUZMÁN
-                </h1>
-                <p className="mb-4">
-                  Actualmente estoy en busqueda de una oportunidad laboral,
-                  estuve como desarrollador freelance trabajando de Full Stack
-                  JavaScript momentaneamente doy mantenimiento e implementando
-                  nuevos requerimientos de mis clientes. A pesar de que tengo +2
-                  años como freelance aun me siento como un junior porque
-                  entiendo que siempre nos encontramos en desarrollo y que mejor
-                  que aprenderlo de los demás.
+                <h3 className="font-bold text-[20px] tracking-wide text-[#273043] mb-4">
+                  Davis Pérez
+                </h3>
+                <p className="text-[14px] text-[#273043]/75 leading-relaxed mb-3">
+                  Actualmente en búsqueda de una oportunidad laboral. Estuve
+                  como desarrollador freelance Full Stack JavaScript, dando
+                  mantenimiento e implementando nuevos requerimientos para mis
+                  clientes. Con +2 años de experiencia freelance, me mantengo en
+                  constante aprendizaje porque entiendo que siempre hay algo
+                  nuevo por descubrir.
                 </p>
-                <p className="mb-4">
-                  Me enseñaron como base JAVA, SPRING, MAVEN y de forma
-                  autodidacta me llamó mucho la atención JAVASCRIPT. Encontré
-                  una libreria llamada REACTJS y me encantó 💖 por ello todos
-                  mis proyectos estan desarrollado en dicho lenguaje. Busco una
-                  empresa para explotar mis conocimientos ya que siento que
-                  estoy para más!🚀.
+                <p className="text-[14px] text-[#273043]/75 leading-relaxed mb-3">
+                  Mi base académica fue JAVA, SPRING y MAVEN, pero de forma
+                  autodidacta me enamoré de JavaScript y React. Todos mis
+                  proyectos están construidos sobre este ecosistema. Busco una
+                  empresa donde pueda seguir creciendo y aportar valor real.
                 </p>
-                <p className="mb-4">
-                  Me especializo en la creación de aplicaciones Front End que se
-                  conectan con API y otras tecnologías de Back End. Me apasiona
-                  aprender nuevas tecnologías y entiendo que hay más de una
-                  manera de realizar una tarea.
-                </p>
-                <p className="mb-4">
-                  Aprendo rápido y puedo aprender nuevas pilas tecnológicas
-                  según sea necesario.🔨
+                <p className="text-[14px] text-[#273043]/75 leading-relaxed">
+                  Me especializo en aplicaciones Front End conectadas con APIs y
+                  Back End. Aprendo rápido, me adapto a nuevas tecnologías y
+                  entiendo que siempre hay más de una manera de resolver un
+                  problema.
                 </p>
               </div>
-              <div className="relative min-h-[450px]">
+              <div className="relative w-full aspect-[3/4] border border-[#eaeff1] overflow-hidden">
                 <Image
-                  className="grayscale"
+                  className="grayscale object-cover object-[center_15%]"
                   src="/assets/img/profile/davisperezg2.jpg"
                   fill
                   alt="Mi Perfil"
@@ -722,64 +349,71 @@ export default function Home() {
 
         <div id="contacto" className="mb-[30px] mt-[30px] scroll-my-[27ex]">
           <div className="bg-white flex flex-col">
-            <h1 className="text-[15px] font-semibold uppercase">Contacto</h1>
+            <h2 className="text-[11px] font-semibold uppercase tracking-widest text-[#273043]/50 border-l-[3px] border-[#273043] pl-3">
+              Contacto
+            </h2>
 
-            <div className="flex flex-col gap-[30px] mt-[50px]">
-              <h1 className="uppercase font-bold text-[28px]">
-                PONERSE EN CONTACTO
-              </h1>
-              <p className="mb-4">
-                Estoy disponible para puestos independientes o de tiempo
-                completo. Contáctame y hablemos.
+            <div className="flex flex-col gap-4 mt-6">
+              <p className="text-[14px] text-[#273043]/75 leading-relaxed">
+                Disponible para puestos independientes o de tiempo completo.
+                Contáctame y hablemos.
               </p>
-              <div className="flex flex-row gap-5">
+              <div className="flex flex-row gap-3">
                 <a
                   href="https://github.com/davisperezg"
                   target="_blank"
                   rel="noreferrer"
+                  className="flex items-center gap-2 px-3 py-2 border border-[#eaeff1] hover:border-[#273043]/30 hover:shadow-sm transition-all duration-200"
                 >
-                  <Image
-                    className="invert-[1] object-cover"
-                    width={25}
-                    height={25}
-                    src="/assets/img/github.svg"
-                    alt="Github"
-                  />
+                  <FaGithub className="w-[18px] h-[18px]" />
+
+                  <span className="text-[12px] font-medium text-[#273043]/70">
+                    GitHub
+                  </span>
                 </a>
                 <a
                   href="https://www.linkedin.com/in/davisperezg"
                   target="_blank"
                   rel="noreferrer"
+                  className="flex items-center gap-2 px-3 py-2 border border-[#eaeff1] hover:border-[#273043]/30 hover:shadow-sm transition-all duration-200"
                 >
-                  <Image
-                    className="invert-[1] object-contain"
-                    width={25}
-                    height={25}
-                    src="/assets/img/linkedin.svg"
-                    alt="LinkedIn"
-                  />
+                  <FaLinkedin className="w-[18px] h-[18px]" />
+
+                  <span className="text-[12px] font-medium text-[#273043]/70">
+                    LinkedIn
+                  </span>
                 </a>
                 <a
                   href="https://wa.link/zwvtjb"
                   target="_blank"
                   rel="noreferrer"
+                  className="flex items-center gap-2 px-3 py-2 border border-[#eaeff1] hover:border-[#273043]/30 hover:shadow-sm transition-all duration-200"
                 >
                   <Image
                     className="object-contain"
-                    width={25}
-                    height={25}
+                    width={18}
+                    height={18}
                     src="/assets/img/whatsapp.svg"
                     alt="Whatsapp"
                   />
+                  <span className="text-[12px] font-medium text-[#273043]/70">
+                    WhatsApp
+                  </span>
                 </a>
-                <a href="mailto:davisperezg@gmail.com">
+                <a
+                  href="mailto:davisperezg@gmail.com"
+                  className="flex items-center gap-2 px-3 py-2 border border-[#eaeff1] hover:border-[#273043]/30 hover:shadow-sm transition-all duration-200"
+                >
                   <Image
                     className="object-contain"
-                    width={25}
-                    height={25}
+                    width={18}
+                    height={18}
                     src="/assets/img/email.svg"
                     alt="Email"
                   />
+                  <span className="text-[12px] font-medium text-[#273043]/70">
+                    Email
+                  </span>
                 </a>
               </div>
             </div>

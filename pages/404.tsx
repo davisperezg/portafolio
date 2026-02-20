@@ -1,9 +1,14 @@
+import Head from "next/head";
 import Link from "next/link";
 import Container from "../components/Container";
 
 const FourOhFour = () => {
   return (
     <>
+      <Head>
+        <title>Página no encontrada | Davis Pérez</title>
+        <meta name="robots" content="noindex, nofollow" />
+      </Head>
       <Container className="mt-[30px] flex flex-grow flex-col">
         <div className="flex flex-row">
           <Link
